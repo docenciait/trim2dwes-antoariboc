@@ -1,0 +1,20 @@
+
+{% extends 'base.html' %}
+{% block content %}
+{% for denuncia in template_data.denuncias %}
+          <div>
+            <div>
+              <div>
+                <h1>{{denuncia.titulo}}</h1>
+                <ul>
+                    <li>{{denuncia.descripcion}}</li>
+                    <li>{{denuncia.categoria}}</li>
+                    <li>{{denuncia.estado}}</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+{% endfor %}
+{% endblock content %}
+
+

@@ -10,13 +10,13 @@
         <h1>Gestión de Denuncias Ciudadanas</h1>
         <nav>
             <ul>
-                {% if user.is_authenticated %}
-                    <li><a href="{% url 'lista_denuncias' %}">Denuncias</a></li>
-                    <li><a href="{% url 'crear_denuncia' %}">Crear denuncia</a></li>
-                    <li><a href="{% url 'logout' %}">Cerrar sesión</a></li>
+                {% if user.is_authenticated %}                
+                    <li><a href="{% url 'denuncias.lista_denuncias' %}">Denuncias</a></li>
+                    <li><a href="{% url 'denuncias.crear_denuncia' %}">Crear denuncia</a></li>
+                    <li><a href="{% url 'usuarios.logout' %}">Cerrar sesión</a></li>
                 {% else %}
-                    <li><a href="{% url 'login' %}">Iniciar sesión</a></li>
-                    <li><a href="{% url 'registro' %}">Registrarse</a></li>
+                    <li><a href="{% url 'usuarios.login' %}">Iniciar sesión</a></li>
+                    <li><a href="{% url 'usuarios.registro' %}">Registrarse</a></li>
                 {% endif %}
             </ul>
         </nav>
