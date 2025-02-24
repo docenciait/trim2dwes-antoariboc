@@ -3,7 +3,7 @@ from .forms import CustomUserCreationForm
 from .models import User
 # Create your views here.
 
-def registro(request):
+def registro(request):    
     template_data = {}
     template_data['title'] = 'Registro'
     if request.method == 'GET':
